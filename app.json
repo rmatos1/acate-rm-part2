@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-typecript",
-    "slug": "app-typecript",
+    "name": "acate-rm-part2",
+    "slug": "acate-rm-part2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
