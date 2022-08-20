@@ -45,7 +45,7 @@ const RMCharacter = () => {
     
                     <View style={{ flex: 1 }}>
     
-                        <Image style={styles.imgModal} source={{ uri: selectedCharacter.image }} />
+                        <Image style={[styles.imgModal, styles.shadow]} source={{ uri: selectedCharacter.image }} />
     
                         <View style={{ padding: 15, flex: 1 }}>
 
@@ -91,11 +91,11 @@ const RMCharacter = () => {
 
         return(
             <Pressable
-                style={styles.card}
+                style={[styles.card, styles.shadow]}
                 onPress={() => showDetails(item.id)}
             >
 
-                <View style={[styles.image, styles.imageBox]}>
+                <View style={[styles.image, styles.shadow]}>
 
                     <Image 
                         style={styles.image} 
@@ -154,9 +154,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 20,
-        elevation: 1,
-        shadowOpacity: .1,
-        shadowRadius: 3,
         padding: 10
     },
     image: {
@@ -164,10 +161,10 @@ const styles = StyleSheet.create({
         height: 100,
         borderRadius: 50
     },
-    imageBox: { 
-        elevation: 2,
-        shadowOpacity: .15,
-        shadowRadius: 5
+    shadow: { 
+        elevation: 1,
+        shadowOpacity: .1,
+        shadowRadius: 3
     },
     textBox: {
         flex: 1,
@@ -193,10 +190,7 @@ const styles = StyleSheet.create({
     imgModal: {
         width: '100%',
         flex: 1,
-        objectFit: 'cover',
-        elevation: 1,
-        shadowOpacity: .1,
-        shadowRadius: 3
+        objectFit: 'cover'
     },
     label: {
         color: '#868686',
