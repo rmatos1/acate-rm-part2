@@ -95,7 +95,7 @@ const RMCharacter = () => {
                 onPress={() => showDetails(item.id)}
             >
 
-                <View style={[styles.image, { elevation: 2 }]}>
+                <View style={[styles.image, styles.imageBox]}>
 
                     <Image 
                         style={styles.image} 
@@ -155,12 +155,19 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20,
         elevation: 1,
-        paddingHorizontal: 10
+        shadowOpacity: .1,
+        shadowRadius: 3,
+        padding: 10
     },
     image: {
         width: 100,
         height: 100,
         borderRadius: 50
+    },
+    imageBox: { 
+        elevation: 2,
+        shadowOpacity: .15,
+        shadowRadius: 5
     },
     textBox: {
         flex: 1,
@@ -187,7 +194,9 @@ const styles = StyleSheet.create({
         width: '100%',
         flex: 1,
         objectFit: 'cover',
-        elevation: 1
+        elevation: 1,
+        shadowOpacity: .1,
+        shadowRadius: 3
     },
     label: {
         color: '#868686',
