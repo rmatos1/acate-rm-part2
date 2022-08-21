@@ -67,7 +67,7 @@ const RMCharacter = () => {
                             style={styles.closeButton}
                             onPress={() => setModalVisible(false)}
                         >
-                            <Text style={{ fontSize: 15, color: '#b6b6b6' }}>Return</Text>
+                            <Text style={{ fontSize: 15, color: '#939393' }}>Return</Text>
                         </Pressable>
 
                     </View>
