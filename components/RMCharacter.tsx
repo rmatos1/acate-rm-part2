@@ -145,7 +145,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 10,
         flex: 1,
-        height: 150,
         marginBottom: 20
     },
     imageBg: {
