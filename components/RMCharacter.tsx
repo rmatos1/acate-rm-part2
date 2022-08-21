@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
     textBox: {
         height: 35,
         paddingVertical: 5,
-        paddingHorizontal: 15,
-        backgroundColor: 'rgba(0, 0, 0, .4)',
+        paddingHorizontal: 10,
+        backgroundColor: 'rgba(0, 0, 0, .45)',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -171,7 +171,8 @@ const styles = StyleSheet.create({
     textName: {
         color: '#fff',
         fontSize: 17,
-        fontWeight: 'bold'
+        flex: 1,
+        paddingRight: 5
     },
     link: {
         fontSize: 12,
@@ -191,7 +192,8 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#909090',
-        fontSize: 16
+        fontSize: 16,
+        flex: 1
     },
     closeButton: { 
         height: 50, 
