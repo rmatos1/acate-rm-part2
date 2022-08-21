@@ -145,12 +145,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 10,
         flex: 1,
-        height: 160,
+        height: 150,
         marginBottom: 20
     },
     imageBg: {
         width: '100%',
-        height: '100%',
+        height: 150,
         justifyContent: 'flex-end'
     },
     shadow: { 
