@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3
     },
     textBox: {
-        height: 35,
+        minHeight: 35,
         paddingVertical: 5,
         paddingHorizontal: 10,
         backgroundColor: 'rgba(0, 0, 0, .45)',
