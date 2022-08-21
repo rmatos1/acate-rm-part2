@@ -1,4 +1,4 @@
-import { SafeAreaView, View, Text, FlatList, Pressable, Image, StyleSheet, Modal } from "react-native";
+import { SafeAreaView, View, Text, FlatList, Pressable, Image, StyleSheet, Modal, ImageBackground } from "react-native";
 import { useState, useEffect } from "react";
 
 import Api from "../services/Api";
@@ -95,26 +95,21 @@ const RMCharacter = () => {
                 onPress={() => showDetails(item.id)}
             >
 
-                <View style={[styles.image, styles.shadow]}>
+                <ImageBackground 
+                    style={styles.imageBg}
+                    imageStyle={{ borderRadius: 10 }}
+                    source={{ uri: item.image }}
+                >
 
-                    <Image 
-                        style={styles.image} 
-                        source={{ uri: item.image }}
-                    />
+                    <View style={styles.textBox}>
 
-                </View>
-                
-                <View style={styles.textBox}>
+                        <Text style={styles.textName}>{ item.name }</Text>
 
-                    <Text style={styles.textName}>{ item.name }</Text>
+                        <Text style={styles.link}>View More</Text>
 
-                    <Text style={styles.text}>{ item.species }</Text>
+                    </View>
 
-                    <Text style={styles.text}>{ item.gender }</Text>
-
-                </View>
-
-                <Text style={styles.link}>View More</Text>
+                </ImageBackground>
 
             </Pressable>
         )
@@ -150,41 +145,38 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 10,
         flex: 1,
-        height: 120,
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 20,
-        padding: 10
+        height: 160,
+        marginBottom: 20
     },
-    image: {
-        width: 100,
-        height: 100,
-        borderRadius: 50
+    imageBg: {
+        width: '100%',
+        height: '100%',
+        justifyContent: 'flex-end'
     },
     shadow: { 
-        elevation: 1,
+        elevation: 2,
         shadowOpacity: .1,
         shadowRadius: 3
     },
     textBox: {
-        flex: 1,
-        paddingLeft: 15
+        height: 35,
+        paddingVertical: 5,
+        paddingHorizontal: 15,
+        backgroundColor: 'rgba(0, 0, 0, .4)',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10
     },
     textName: {
-        color: '#545454',
-        fontSize: 18,
+        color: '#fff',
+        fontSize: 17,
         fontWeight: 'bold'
     },
-    text: {
-        color: '#868686',
-        fontSize: 15
-    },
     link: {
-        fontSize: 11,
-        color: '#939393',
-        position: 'absolute',
-        right: 8,
-        bottom: 8,
+        fontSize: 12,
+        color: '#f5f5f5',
         textDecorationLine: 'underline'
     },
     imgModal: {
@@ -197,6 +189,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         width: 100
+    },
+    text: {
+        color: '#909090',
+        fontSize: 16
     },
     closeButton: { 
         height: 50, 
