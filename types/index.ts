@@ -13,3 +13,8 @@ export interface ISelectedCharacter {
     origin: { name: string };
     status: string;
 }
+
+export interface IVisibilityContext {
+    modalVisible: boolean; 
+    toggleVisibility: (params: any) => any;
+}
